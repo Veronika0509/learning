@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <title>Изучение слов</title>
+</head>
+<body>
+<div class="container">
+    <div class="numbers-section">
+        <h1 class="title">Цифры</h1>
+        <a class="btn" id="num-btn">Начать!</a>
+        <p id="num-text" class="numbers">0</p>
+    </div>
+    <div class="words-section">
+        <div class="words-wrapper">
+            <h1 class="title">Слова</h1>
+            <a class="btn" id="word-btn">Начать!</a>
+            <div class="wrapper">
+                <p id="word-text" class="words">Слово</p>
+                <input type="text" placeholder="Перевод (с маленькой)" class="input word-input" id="word-input">
+                <div class="btns-wrapper">
+                    <a class="check btn" id="check">Проверить</a>
+                    <a class="forgot btn" id="forgot">Забыл(a)</a>
+                </div>
+            </div>
+            <div class="richtig" id="richtig">Правильно</div>
+            <div class="falsch" id="falsch">Не правильно</div>
+        </div>
+    </div>
+    <div>
+        <div class="sentence-section">
+            <div>
+                <h1 class="title">Предложения</h1>
+                <a class="btn" id="sent-btn">Начать!</a>
+                <p class="sentence" id="sent-text">Предложение</p>
+                <input type="text" placeholder="Перевод" class="input sent-input" id="sent-input">
+                <div class="btns">
+                    <a class="sent-btn btn" id="sent-check-btn">Проверить</a>
+                    <a class="forgot btn" id="sent-forgot">Забыл(a)</a>
+                </div>
+                <div class="richtig" id="sent-richtig">Правильно</div>
+                <div class="falsch" id="sent-falsch">Не правильно</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
