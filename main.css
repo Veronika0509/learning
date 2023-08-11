@@ -158,3 +158,15 @@ a {
         width: 100%;
     }
 }
+
+.num-input {
+    display: block;
+    width: 300px;
+    margin: 40px auto 0 auto;
+}
+.num-forgot {
+    margin-left: 25px;
+}
+.num-btn, .num-forgot {
+    margin-top: 0;
+}
