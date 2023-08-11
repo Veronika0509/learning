@@ -118,8 +118,8 @@ a {
 }
 .sent-input {
     width: 400px;
-    margin-top: 40px;
-    margin-left: 0;
+    display: block;
+    margin: 40px auto 0 auto;
 }
 .btns {
     display: flex;
