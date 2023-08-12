@@ -171,5 +171,5 @@ a {
     margin-top: 0;
 }
 .word-input {
-    text-transform: capitalize;
+    text-transform: lowercase;
 }
