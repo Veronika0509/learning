@@ -1064,6 +1064,7 @@ const wordForgot = document.getElementById('forgot')
 const wordsArray = [
     ['как', 'wie'],
     ['называться', 'heißen'],
+    ['добрый день', 'guten Tag'],
     ['и', 'und'],
     ['откуда', 'woher'],
     ['приходить', 'kommen'],
@@ -1154,11 +1155,12 @@ const endWordsArray = [
     ['уставш(ий).', 'müde.'],
     ['радостн(ый). ', 'froh.'],
 ]
-const questionsArray = [
+const sentencesArray = [
     ['Как меня зовут?', 'Wie heiße ich?'],
     ['Как тебя зовут?', 'Wie heißt du?'],
-    ['Как его зовут?', 'Wie heißt er?'],
+    ['Как его зовут?(он)', 'Wie heißt er?'],
     ['Как ее зовут?', 'Wie heißt sie?'],
+    ['Как его зовут?(оно)', 'Wie heißt es?'],
     ['Как нас зовут?', 'Wie heißen wir?'],
     ['Как вас зовут?(множ.числ.)', 'Wie heißt ihr?'],
     ['Как их зовут?(они)', 'Wie heißen sie?'],
@@ -1166,8 +1168,9 @@ const questionsArray = [
 
     ['Сколько мне лет?', 'Wie alt bin ich?'],
     ['Сколько тебе лет?', 'Wie alt bist du?'],
-    ['Сколько ему лет?', 'Wie alt ist er?'],
+    ['Сколько ему лет?(он)', 'Wie alt ist er?'],
     ['Сколько ей лет?', 'Wie alt ist sie?'],
+    ['Сколько ему лет?(оно)', 'Wie alt ist es?'],
     ['Сколько нам лет?', 'Wie alt sind wir?'],
     ['Сколько вам лет?(множ.числ.)', 'Wie alt seid ihr?'],
     ['Сколько им лет?', 'Wie alt sind sie?'],
@@ -1202,6 +1205,76 @@ const questionsArray = [
     ['Кто вы?(множ.числ.)', 'Wer seid ihr?'],
     ['Кто они?', 'Wer sind sie?'],
     ['Кто Вы?(уваж.форма)', 'Wer sind Sie?'],
+    
+    ['Что я делаю?', 'Was mache ich?'],
+    ['Что ты делаешь?', 'Was machst du?'],
+    ['Что он делает?', 'Was macht er?'],
+    ['Что она делает?', 'Was macht sie?'],
+    ['Что оно делает?', 'Was macht es?'],
+    ['Что мы делаем?', 'Was machen wir?'],
+    ['Что вы делаете?(множ.числ.)', 'Was macht ihr?'],
+    ['Что они делают?', 'Was machen sie?'],
+    ['Что вы делаете?(уваж.форма)', 'Was machen Sie?'],
+
+    ['Меня зовут Инна.', 'Ich heiße Inna.'],
+    ['Тебя зовут Инна.', 'Du heißt Inna.'],
+    ['Его зовут Иван.(он)', 'Er heißt Ivan.'],
+    ['Ее зовут Инна.', 'Sie heißt Inna.'],
+    ['Его зовут Иван.(оно)', 'Es heißt Ivan.'],
+    ['Нас зовут Инна и Иван.', 'Wir heißen Inna und Ivan.'],
+    ['Вас зовут Инна и Иван.(множ.числ.)', 'Ihr heißt Inna und Ivan.'],
+    ['Их зовут Инна и Иван.', 'Sie heißen Inna und Ivan.'],
+    ['Вас зовут Инна.(уваж.форма)', 'Sie heißen Inna.'],
+
+    ['Мое имя Инна.', 'Mein Name ist Inna.',],
+    ['Твое имя Инна.', 'Dein Name ist Inna.',],
+    ['Его имя Инна.(он)', 'Sein Name ist Inna.',],
+    ['Ее имя Инна.', 'Ihr Name ist Inna.',],
+    ['Его имя Инна.(оно)', 'Sein Name ist Inna.',],
+    ['Наши имена Инна и Иван.', 'Unsere Namen sind Inna und Ivan.',],
+    ['Ваши имена Инна и Иван.', 'Euer Namen sind Inna und Ivan.',],
+    ['Ихние имена Инна и Иван.', 'Ihre Namen sind Inna und Ivan.',],
+    ['Ваше имя Инна.', 'Ihr Name ist Inna.',],
+
+    ['Мне 35 лет.', 'Ich bin 35 Jahre alt.'],
+    ['Тебе 35 лет.', 'Du bist 35 Jahre alt.'],
+    ['Ему 35 лет.(он)', 'Er ist 35 Jahre alt.'],
+    ['Ей 35 лет.', 'Sie ist 35 Jahre alt.'],
+    ['Ему 35 лет.(оно)', 'Es ist 35 Jahre alt.'],
+    ['Нам 35 и 48 лет.', 'Wir sind 35 und 48 Jahre alt.'],
+    ['Вам 35 и 48 лет.(множ.числ.)', 'Ihr seid 35 und 48 Jahre alt.'],
+    ['Им 35 и 48 лет.', 'Sie sind 35 und 48 Jahre alt.'],
+    ['Вам 35 лет.(уваж.форма)', 'Sie sind 35 Jahre alt.'],
+
+    ['Я из Украины.', 'Ich komme aus der Ukraine.'],
+    ['Ты из Украины.', 'Du kommst aus der Ukraine.'],
+    ['Он из Украины.', 'Er kommt aus der Ukraine.'],
+    ['Она из Украины.', 'Sie kommt aus der Ukraine.'],
+    ['Оно из Украины.', 'Es kommt aus der Ukraine.'],
+    ['Мы из Украины.', 'Wir kommen aus der Ukraine.'],
+    ['Вы из Украины.(множ.числ.)', 'Ihr kommt aus der Ukraine.'],
+    ['Они из Украины.', 'Sie kommen aus der Ukraine.'],
+    ['Вы из Украины.(уваж.форма)', 'Sie kommen aus der Ukraine.'],
+
+    ['Я живу в Шлюхтерне.', 'Ich wohne in Schlüchtern.'],
+    ['Ты живешь в Шлюхтерне.', 'Du wohnst in Schlüchtern.'],
+    ['Он живет в Шлюхтерне.', 'Er wohnt in Schlüchtern.'],
+    ['Она живет в Шлюхтерне.', 'Sie wohnt in Schlüchtern.'],
+    ['Оно живет в Шлюхтерне.', 'Es wohnt in Schlüchtern.'],
+    ['Мы живем в Шлюхтерне.', 'Wir wohnen in Schlüchtern.'],
+    ['Вы живете в Шлюхтерне.(множ.числ.)', 'Ihr wohnt in Schlüchtern.'],
+    ['Они живут в Шлюхтерне.', 'Sie wohnen in Schlüchtern.'],
+    ['Вы живете в Шлюхтерне.(уваж.форма)', 'Sie wohnen in Schlüchtern.'],
+    
+    ['Я делаю домашнее задание.', 'Ich mache Hausaufgaben.'],
+    ['Ты делаешь домашнее задание.', 'Du machst Hausaufgaben.'],
+    ['Он делает домашнее задание.', 'Er macht Hausaufgaben.'],
+    ['Она делает домашнее задание.', 'Sie macht Hausaufgaben.'],
+    ['Оно делает домашнее задание.', 'Es macht Hausaufgaben.'],
+    ['Мы делаем домашнее задание.', 'Wir machen Hausaufgaben.'],
+    ['Вы делаете домашнее задание.', 'Ihr macht Hausaufgaben.'],
+    ['Они делают домашнее задание.', 'Sie machen Hausaufgaben.'],
+    ['Вы делаете домашнее задание.', 'Sie machen Hausaufgaben.'],
 ]
 
 let pronArrNum
@@ -1223,10 +1296,10 @@ sentBtn.addEventListener('click', function () {
         sentText.textContent = pronounArray[pronArrNum][0] + addWordsArray[addWordArrNum][0] + endWordsArray[endWordsArrNum][0]
         sentTextValue = pronounArray[pronArrNum][1] + addWordsArray[addWordArrNum][1] + endWordsArray[endWordsArrNum][1]
     } else if (sentMainNum === 1) {
-        const sentQuestArrNum = getRandomNumber(questionsArray.length)
-        const arrays = questionsArray[sentQuestArrNum][0]
-        sentText.textContent = questionsArray[sentQuestArrNum][0]
-        sentTextValue = questionsArray[sentQuestArrNum][1]
+        const sentQuestArrNum = getRandomNumber(sentencesArray.length)
+        const arrays = sentencesArray[sentQuestArrNum][0]
+        sentText.textContent = sentencesArray[sentQuestArrNum][0]
+        sentTextValue = sentencesArray[sentQuestArrNum][1]
     }
     sentInput.value = ''
 })
@@ -1240,41 +1313,6 @@ sentCheckBtn.addEventListener('click', function () {
         sentFalsch.classList.add('active')
     }
 })
-
 sentForgotBtn.addEventListener('click', function () {
     alert(sentTextValue)
 })
-
-// sentCheckBtn.addEventListener('click', function () {
-//     if (sentInput.value = sentText) {
-//
-//     }
-// })
-
-//
-// let sentCount = 0
-//
-// sentBtn.addEventListener('click', function () {
-//     sentCount ++
-//     pronArrNum = getRandomNumber(pronounArray.length)
-//     addWordArrNum = getRandomNumber(addWordsArray.length)
-//     endWordsArrNum = getRandomNumber(endWordsArray.length)
-//     sentText.textContent = pronounArray[pronArrNum][0] + addWordsArray[addWordArrNum][0] + endWordsArray[endWordsArrNum][0]
-//     Weiter(sentCount, sentBtn)
-// })
-//
-// sentCheckBtn.addEventListener('click', function () {
-//     sentRichtig.classList.remove('active')
-//     sentFalsch.classList.remove('active')
-//     const allArrays = pronounArray[pronArrNum][1] + addWordsArray[addWordArrNum][1] + endWordsArray[endWordsArrNum][1]
-//     if (sentInput.value === allArrays) {
-//         sentRichtig.classList.add('active')
-//     } else {
-//         sentFalsch.classList.add('active')
-//     }
-//     sentInput.value = ''
-// })
-//
-// sentForgotBtn.addEventListener('click', function () {
-//     alert(pronounArray[pronArrNum][1] + addWordsArray[addWordArrNum][1] + endWordsArray[endWordsArrNum][1])
-// })
