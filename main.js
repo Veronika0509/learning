@@ -1039,9 +1039,11 @@ numBtn.addEventListener('click', function () {
     numInput.value = ''
 })
 numCheckBtn.addEventListener('click', function () {
+    let numValueStr = numInput.value
+    numValueStr = value.trim().toLowerCase()
     numRichtig.classList.remove('active')
     numFalsch.classList.remove('active')
-    if (numInput.value === numValue) {
+    if (numValueStr === numValue) {
         numRichtig.classList.add('active')
     } else {
         numFalsch.classList.add('active')
@@ -1118,8 +1120,10 @@ wordBtn.addEventListener('click', function () {
 wordCheckBtn.addEventListener('click', function () {
     wordRichtig.classList.remove('active')
     wordFalsch.classList.remove('active')
-    const value = wordInput.value
-    if (value === wordsArray[word][1]) {
+    let wordValueStr = wordInput.value
+    wordValueStr = wordValueStr.trim().charAt(0).toUpperCase() + wordValueStr.slice(1)
+    console.log(wordValueStr)
+    if (wordValueStr === wordsArray[word][1]) {
         wordRichtig.classList.add('active')
     } else {
         wordFalsch.classList.add('active')
@@ -1313,7 +1317,18 @@ sentBtn.addEventListener('click', function () {
 sentCheckBtn.addEventListener('click', function () {
     sentRichtig.classList.remove('active')
     sentFalsch.classList.remove('active')
-    if (sentInput.value === sentTextValue) {
+    let sentValueStr = sentInput.value
+    if (sentTextValue[sentTextValue.length - 1] === '.') {
+        if (sentValueStr[sentValueStr.length - 1] !== '.') {
+            sentValueStr += '.'
+        }
+    } else {
+        if (sentValueStr[sentValueStr.length - 1] !== '?') {
+            sentValueStr += '?'
+        }
+    }
+    console.log(sentValueStr)
+    if (sentValueStr === sentTextValue) {
         sentRichtig.classList.add('active')
     } else {
         sentFalsch.classList.add('active')
