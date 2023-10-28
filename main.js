@@ -1048,6 +1048,7 @@ numCheckBtn.addEventListener('click', function () {
     } else {
         numFalsch.classList.add('active')
     }
+    numRichtig.classList.add('active')
 })
 numForgotBtn.addEventListener('click', function () {
     alert(numValue)
