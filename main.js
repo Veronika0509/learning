@@ -1039,16 +1039,15 @@ numBtn.addEventListener('click', function () {
     numInput.value = ''
 })
 numCheckBtn.addEventListener('click', function () {
-    let numValueStr = numInput.value
-    numValueStr = value.trim().toLowerCase()
     numRichtig.classList.remove('active')
     numFalsch.classList.remove('active')
+    let numValueStr = numInput.value
+    numValueStr = numValueStr.trim().toLowerCase()
     if (numValueStr === numValue) {
         numRichtig.classList.add('active')
     } else {
         numFalsch.classList.add('active')
     }
-    numRichtig.classList.add('active')
 })
 numForgotBtn.addEventListener('click', function () {
     alert(numValue)
@@ -1308,7 +1307,6 @@ sentBtn.addEventListener('click', function () {
         sentTextValue = pronounArray[pronArrNum][1] + addWordsArray[addWordArrNum][1] + endWordsArray[endWordsArrNum][1]
     } else if (sentMainNum === 1) {
         const sentQuestArrNum = getRandomNumber(sentencesArray.length)
-        const arrays = sentencesArray[sentQuestArrNum][0]
         sentText.textContent = sentencesArray[sentQuestArrNum][0]
         sentTextValue = sentencesArray[sentQuestArrNum][1]
     }
@@ -1319,6 +1317,9 @@ sentCheckBtn.addEventListener('click', function () {
     sentRichtig.classList.remove('active')
     sentFalsch.classList.remove('active')
     let sentValueStr = sentInput.value
+    if (sentValueStr[sentValueStr.length - 1] === ' ') {
+        sentValueStr = sentValueStr.slice(0, -1)
+    }
     if (sentTextValue[sentTextValue.length - 1] === '.') {
         if (sentValueStr[sentValueStr.length - 1] !== '.') {
             sentValueStr += '.'
@@ -1328,6 +1329,7 @@ sentCheckBtn.addEventListener('click', function () {
             sentValueStr += '?'
         }
     }
+    sentValueStr = sentValueStr.replace(/ \./g, '.').replace(/\s+/g, ' ')
     console.log(sentValueStr)
     if (sentValueStr === sentTextValue) {
         sentRichtig.classList.add('active')
